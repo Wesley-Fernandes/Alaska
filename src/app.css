@@ -1,0 +1,376 @@
+.App{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url("https://i.ibb.co/DrCYTkg/pexels-josh-meeder-11011919.jpg");
+}
+
+.App header{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.logo:hover{
+    filter: drop-shadow(0 0 5px rgb(255, 153, 0));
+}
+header img{
+    height: 70%;
+    margin-left: 4rem;
+}
+.menu-button{
+    display: none;
+}
+.menu{
+    display: none;
+}
+header .navbar{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+}
+.navbar ul{
+    width: 70%;
+    height: 100%;
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.navbar ul li{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.navbar ul li:hover{
+    color: rgb(255, 153, 0);
+}
+.navbar ul li svg{
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+.App main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+.hud{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hud h1{
+    font-size: 10rem;
+    text-transform: uppercase;
+    filter: invert(100%);
+    opacity: 0.5;
+    font-weight: bolder;
+}
+.hud h2{
+    text-align: center;
+    font-size: 2.5rem;
+    opacity: 0.3;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+.hud button{
+    width: 300px;
+    height: 80px;
+    background-color: transparent;
+    filter: drop-shadow(0 0 10px 10px rgb(255, 153, 0));
+    box-shadow: 0 0 10px 1px rgb(255, 153, 0);
+    border: 3px solid orange;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    transition: 0.8s ease-in-out;
+    cursor: pointer;
+    letter-spacing: 5px;
+}
+.hud button:hover{
+    background: rgb(255, 153, 0);
+    border: none;
+}
+
+
+
+
+.App .footer{
+    height: 200px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.App .card{
+    max-width: 700px;
+    border-left: 4px solid rgb(255, 153, 0);
+    padding-left: 2rem;
+    color: white;
+    transition: 0.8s ease-in-out;
+}
+.card:hover{
+    border-color: white;
+    background-color: #2727277e;
+    border-radius: 0 10px 10px 0;
+}
+.App .social{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 400px;
+}
+
+.social svg{
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 153, 0);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.social svg:hover{
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+        
+    .App{
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+        background-position: right;
+        background-size: cover;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        max-width: 100vw;
+    }
+    header{
+        width: 100%;
+    }
+    header .navbar{
+        display: none;
+    }
+    header img{
+        margin-left: 0.5rem;
+    }
+    .logo{
+        height: 50px;
+    }
+
+    header .menu-button{
+        display: flex;
+        position: absolute;
+        width: 100%;
+        
+        z-index: 21;
+        justify-content: flex-end;
+        align-items: center;
+
+
+        top: 10px;
+        right: 10px;
+        height: 40px;
+
+        font-size: 3rem;
+        color: white;
+
+        
+    }
+    main{
+        overflow-x: hidden;
+    }
+    main .menu-button svg{
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    main .position{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+        left: 0;
+        bottom: 0;
+        transition: 0.5s ease-in-out;
+    }
+    .icon-active{
+        animation-name: rotate-active;
+        animation-duration: 0.5s;
+        animation-fill-mode:  forwards;
+        animation-timing-function: ease-in-out;
+    }
+    .icon-disabled{
+        animation-name: rotate-disabled;
+        animation-duration: 0.5s;
+        animation-fill-mode:  forwards;
+        animation-timing-function: ease-in;
+    }
+    
+    .hidden{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+        left: 0;
+        bottom: 0;
+        transition: 0.5s ease-in-out;
+
+
+        animation-name: hide_options;
+        animation-duration: 0.5s;
+        animation-fill-mode:  forwards;
+        animation-timing-function: ease-in-out;
+    }
+    .showen{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+        left: 0;
+        bottom: 0;
+        animation-name: show_options;
+        animation-duration: 0.5s;
+        animation-fill-mode:  forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    main .menu{
+        align-items: center;
+        text-indent: 1rem;
+        font-size: 2rem;
+        z-index: 20;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        color: white;
+        background-color: #272727;
+        transition: 0.5s ease-in-out;
+    }
+
+    @keyframes show_options{
+        0%{
+            opacity: 0;
+        }
+        25%{
+            opacity: 0.25;
+        }
+        50%{
+            opacity: 0.50;
+        }
+        75%{
+            opacity: 0.75;
+        }
+        100%{
+            opacity: 1;
+            display: none;
+            
+        }
+    }
+
+    @keyframes hide_options {
+        0%{
+            opacity: 1;
+        }
+        25%{
+            opacity: 0.75;
+        }
+        50%{
+            opacity: 0.50;
+        }
+        75%{
+            opacity: 0.25;
+        }
+        100%{
+            opacity: 0;
+            display: none;
+            z-index: -1;
+        }
+    }
+
+    @keyframes rotate-active {
+        0%{
+
+        }
+        25%{
+            transform: rotate(22deg);
+        }
+        50%{
+            transform: rotate(44deg);
+        }
+        75%{
+            transform: rotate(68deg);
+        }
+        100%{
+            transform: rotate(90deg);
+        }
+    }
+
+    @keyframes rotate-disabled {
+        0%{
+            transform: rotate(90deg);
+        }
+        25%{
+            transform: rotate(68deg);
+
+        }
+        50%{
+            transform: rotate(44deg);
+        }
+        75%{
+            transform: rotate(22deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+    .menu ul{
+        list-style: none;
+    }
+    .menu ul li{
+        margin: 1rem;
+    }
+    .menu ul li svg{
+        margin-right: 1rem;
+    }
+
+
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social{
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    .hud h1{
+        font-size: 5rem;
+    }
+    .hud h2{
+        font-size: 1.5rem;
+    }
+}

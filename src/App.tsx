@@ -1,4 +1,3 @@
-import Home from "./pages/Home"
 import { useContext, useState } from "react"
 import {usersContext} from "./context/usersContext"
 import {FiTwitter, FiBookOpen, FiMenu} from "react-icons/fi"

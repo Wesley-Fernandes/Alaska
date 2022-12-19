@@ -8,5 +8,6 @@
 <ul>
   <li> React JS</li>
   <li> React Icons</li>
+  <li> Typescript</li>
   <li> Sass</li>
   <li> Html5</li>

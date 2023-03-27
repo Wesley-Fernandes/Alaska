@@ -1,5 +1,5 @@
 # Alaska
-<p align="center">SPA baseada em uma imagem do Behance. Sem fins lucrativos.</p>
+> SPA baseada em uma imagem do Behance. Sem fins lucrativos.
 
 ![wind (1)](https://user-images.githubusercontent.com/89518536/208547127-edce746c-619e-49f9-a8fb-09620a2b2c7b.png)
 
